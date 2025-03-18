@@ -2,16 +2,36 @@
 
 import { useQuery } from "@tanstack/react-query";
 import {
+  genderValues,
   getAllCharactersQuery,
   statusValues,
 } from "@/modules/character/character";
-import type { CharacterStatus } from "@/modules/character/types";
+import type {
+  CharacterGender,
+  CharacterStatus,
+} from "@/modules/character/types";
 import { ListError } from "./components/list/list-error";
 import { List } from "./components/list/list";
 import { ListLoading } from "./components/list/list-loading";
 
-const Filters = ({ status }: { status: CharacterStatus }) => (
+const Filters = ({
+  gender,
+  status,
+}: {
+  gender: CharacterGender;
+  status: CharacterStatus;
+}) => (
   <form action="" method="GET" className="flex gap-4">
+    <div className="flex gap-2 items-center">
+      <label htmlFor="gender">Gender</label>
+      <select id="gender" name="gender" className="border-2  p-2">
+        {genderValues.map((v) => (
+          <option key={v} value={v} selected={v === gender}>
+            {v}
+          </option>
+        ))}
+      </select>
+    </div>
     <div className="flex gap-2 items-center">
       <label htmlFor="status">Status</label>
       <select id="status" name="status" className="border-2  p-2">
@@ -26,14 +46,20 @@ const Filters = ({ status }: { status: CharacterStatus }) => (
   </form>
 );
 
-export default function Home({ status }: { status: CharacterStatus }) {
+export default function Home({
+  gender,
+  status,
+}: {
+  gender: CharacterGender;
+  status: CharacterStatus;
+}) {
   const { status: queryStatus, data } = useQuery(
-    getAllCharactersQuery({ status }),
+    getAllCharactersQuery({ gender, status }),
   );
 
   return (
     <main className="m-4 grid gap-4">
-      <Filters status={status} />
+      <Filters gender={gender} status={status} />
       {queryStatus === "pending" && <ListLoading />}
       {queryStatus === "error" && <ListError />}
       {queryStatus === "success" && (

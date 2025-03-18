@@ -11,14 +11,14 @@ export default async function Page({
 }: {
   searchParams: Promise<Record<string, string>>;
 }) {
-  const { status } = await searchParams;
+  const { gender, status } = await searchParams;
 
   const queryClient = new QueryClient();
-  await queryClient.prefetchQuery(getAllCharactersQuery({ status }));
+  await queryClient.prefetchQuery(getAllCharactersQuery({ gender, status }));
 
   return (
     <HydrationBoundary state={dehydrate(queryClient)}>
-      <Home status={status} />
+      <Home gender={gender} status={status} />
     </HydrationBoundary>
   );
 }
