@@ -1,5 +1,32 @@
 import { test, expect } from "@playwright/test";
 
+const pages = [
+  {
+    name: "/",
+    query: "",
+    expectedText: "Found 826 characters",
+    expectedStatus: "All",
+  },
+  {
+    name: "Results by Status",
+    query: "?status=Alive",
+    expectedText: "Found 439 characters",
+    expectedStatus: "Alive",
+  },
+  {
+    name: "Results with invalid Status (status=Potato)",
+    query: "?status=Potato",
+    expectedText: "Found 826 characters",
+    expectedStatus: "All",
+  },
+  {
+    name: "Results with extra parameters (foo=bar)",
+    query: "?status=Alive&foo=bar",
+    expectedText: "Found 439 characters",
+    expectedStatus: "Alive",
+  },
+];
+
 const javaScriptEnabledOptions = [true, false];
 
 test.describe("On render", () => {
@@ -9,17 +36,18 @@ test.describe("On render", () => {
       () => {
         test.use({ javaScriptEnabled });
 
-        test("shows list of characters", async ({ page }) => {
-          await page.goto("http://localhost:3000/");
+        pages.forEach(({ name, query, expectedText, expectedStatus }) => {
+          test(name, async ({ page }) => {
+            await page.goto(`http://localhost:3000/${query}`);
 
-          await expect(
-            page.getByRole("heading", { name: "Found 826 characters" })
-          ).toBeVisible();
+            await page.waitForLoadState("networkidle"); // Ensure the page is fully loaded
 
-          const characters = page.locator("ul > li");
+            await expect(
+              page.getByRole("heading", { name: expectedText })
+            ).toBeVisible();
 
-          await expect(characters).toHaveCount(20);
-          await expect(characters.first()).toHaveText("Rick Sanchez");
+            await expect(page.getByLabel("Status")).toHaveValue(expectedStatus);
+          });
         });
       }
     );

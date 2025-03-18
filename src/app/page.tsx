@@ -6,14 +6,19 @@ import {
 import Home from "@/components/home/home";
 import { getAllCharactersQuery } from "@/modules/character/character";
 
-export default async function Page() {
-  const queryClient = new QueryClient();
+export default async function Page({
+  searchParams,
+}: {
+  searchParams: Promise<Record<string, string>>;
+}) {
+  const { status } = await searchParams;
 
-  await queryClient.prefetchQuery(getAllCharactersQuery);
+  const queryClient = new QueryClient();
+  await queryClient.prefetchQuery(getAllCharactersQuery({ status }));
 
   return (
     <HydrationBoundary state={dehydrate(queryClient)}>
-      <Home />
+      <Home status={status} />
     </HydrationBoundary>
   );
 }

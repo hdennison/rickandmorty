@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Character } from "rickmortyapi";
+import { Character } from "@/modules/character/types";
 
 export const List = ({
   characters,
@@ -10,10 +10,13 @@ export const List = ({
 }) => (
   <div className="grid gap-2">
     <h1 className="font-bold">Found {amount} characters</h1>
-    <ul>
-      {characters.map(({ id, name }) => (
+    <ul className="grid gap-4">
+      {characters.map(({ id, name, status }) => (
         <li key={id}>
-          <Link href={`/character/${id}`}>{name}</Link>
+          <Link className="font-bold" href={`/character/${id}`}>
+            {name}
+          </Link>
+          <p>Status: {status}</p>
         </li>
       ))}
     </ul>

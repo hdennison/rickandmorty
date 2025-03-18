@@ -1,9 +1,24 @@
 import { getCharacter, getCharacters } from "rickmortyapi";
-export type { Character } from "rickmortyapi";
+import { CharacterStatus } from "./types";
 
-export const getAllCharactersQuery = {
-  queryKey: ["getAllCharacters"],
-  queryFn: () => getCharacters(),
+export const statusValues = ["All", "Dead", "Alive", "unknown"];
+export const genderValues = ["All", "Female", "Male", "Genderless", "unknown"];
+
+export const getAllCharactersQuery = ({
+  status,
+}: {
+  status?: CharacterStatus;
+}) => {
+  const queryOptions: Record<string, string> = {};
+
+  if (status && status !== "All" && statusValues.includes(status))
+    queryOptions["status"] = status;
+
+  return {
+    // eslint-disable-next-line @tanstack/query/exhaustive-deps
+    queryKey: ["characters", queryOptions.status ?? "All"],
+    queryFn: () => getCharacters(queryOptions),
+  };
 };
 
 export const getCharacterQuery = (id: number | string) => {
