@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Character } from "rickmortyapi";
 
 export const List = ({
@@ -11,7 +12,9 @@ export const List = ({
     <h1 className="font-bold">Found {amount} characters</h1>
     <ul>
       {characters.map(({ id, name }) => (
-        <li key={id}>{name}</li>
+        <li key={id}>
+          <Link href={`/character/${id}`}>{name}</Link>
+        </li>
       ))}
     </ul>
   </div>
