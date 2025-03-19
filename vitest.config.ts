@@ -5,7 +5,7 @@ import tsconfigPaths from "vite-tsconfig-paths";
 export default defineConfig({
   plugins: [tsconfigPaths(), react()],
   test: {
-    include: ["tests/vitest/**/*.test.tsx"],
+    include: ["src/**/*.test.tsx"],
     browser: {
       provider: "playwright",
       enabled: true,
