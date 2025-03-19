@@ -1,0 +1,81 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Renders as wrapper 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    
+    
+    
+  
+
+
+    <div>
+      <div
+        class="bg-white rounded-lg shadow-md p-4"
+        id="panel"
+      >
+        Foo
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="bg-white rounded-lg shadow-md p-4"
+      id="panel"
+    >
+      Foo
+    </div>
+  </div>,
+  "debug": [Function],
+  "getByAltText": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholder": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Renders asChild 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    
+    
+    
+  
+
+
+    <div>
+      <article
+        class="bg-white rounded-lg shadow-md p-4"
+        id="Panel"
+      >
+        Bar
+      </article>
+    </div>
+  </body>,
+  "container": <div>
+    <article
+      class="bg-white rounded-lg shadow-md p-4"
+      id="Panel"
+    >
+      Bar
+    </article>
+  </div>,
+  "debug": [Function],
+  "getByAltText": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholder": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
