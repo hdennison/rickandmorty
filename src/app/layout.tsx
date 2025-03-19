@@ -6,6 +6,7 @@ import { SITE_NAME } from "@/constants";
 
 export const metadata: Metadata = {
   title: SITE_NAME,
+  description: "Yet another Rick and Morty API website",
 };
 
 export default function RootLayout({

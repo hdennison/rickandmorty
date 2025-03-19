@@ -59,7 +59,7 @@ export const List = ({
   return (
     <div className="grid gap-6">
       <Panel className="flex justify-between items-center">
-        <h1 className="font-bold">Found {amount} characters</h1>
+        <h2 className="font-bold">Found {amount} characters</h2>
         <div className="flex gap-3 items-center">
           <label htmlFor="order" className="sr-only md:not-sr-only">
             Order
