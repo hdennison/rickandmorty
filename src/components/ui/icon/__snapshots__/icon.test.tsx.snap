@@ -1,100 +1,5 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Button with icon 1`] = `
-<button
-  class="flex items-center gap-2 cursor-pointer px-4 py-2 rounded-md justify-center bg-[#ddd] border-[#333] hover:bg-[#ccc]"
->
-  <svg
-    class="lucide lucide-search"
-    fill="none"
-    height="16"
-    stroke="currentColor"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-    stroke-width="2"
-    viewBox="0 0 24 24"
-    width="16"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <circle
-      cx="11"
-      cy="11"
-      r="8"
-    />
-    <path
-      d="m21 21-4.3-4.3"
-    />
-  </svg>
-  Click me!
-</button>
-`;
-
-exports[`ChevronsUpDown 1`] = `
-{
-  "asFragment": [Function],
-  "baseElement": <body>
-    
-    
-    
-  
-
-
-    <div>
-      <svg
-        class="lucide lucide-chevrons-up-down"
-        fill="none"
-        height="24"
-        stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2"
-        viewBox="0 0 24 24"
-        width="24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="m7 15 5 5 5-5"
-        />
-        <path
-          d="m7 9 5-5 5 5"
-        />
-      </svg>
-    </div>
-  </body>,
-  "container": <div>
-    <svg
-      class="lucide lucide-chevrons-up-down"
-      fill="none"
-      height="24"
-      stroke="currentColor"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      stroke-width="2"
-      viewBox="0 0 24 24"
-      width="24"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="m7 15 5 5 5-5"
-      />
-      <path
-        d="m7 9 5-5 5 5"
-      />
-    </svg>
-  </div>,
-  "debug": [Function],
-  "getByAltText": [Function],
-  "getByLabelText": [Function],
-  "getByPlaceholder": [Function],
-  "getByRole": [Function],
-  "getByTestId": [Function],
-  "getByText": [Function],
-  "getByTitle": [Function],
-  "rerender": [Function],
-  "unmount": [Function],
-}
-`;
-
 exports[`ChevronsUpDownIcon 1`] = `
 {
   "asFragment": [Function],
@@ -107,7 +12,7 @@ exports[`ChevronsUpDownIcon 1`] = `
 
     <div>
       <svg
-        class="lucide lucide-chevrons-up-down"
+        class="lucide lucide-chevrons-up-down shrink-0"
         fill="none"
         height="24"
         stroke="currentColor"
@@ -129,7 +34,7 @@ exports[`ChevronsUpDownIcon 1`] = `
   </body>,
   "container": <div>
     <svg
-      class="lucide lucide-chevrons-up-down"
+      class="lucide lucide-chevrons-up-down shrink-0"
       fill="none"
       height="24"
       stroke="currentColor"
@@ -173,7 +78,7 @@ exports[`CircleIcon 1`] = `
 
     <div>
       <svg
-        class="lucide lucide-circle"
+        class="lucide lucide-circle shrink-0"
         fill="none"
         height="24"
         stroke="currentColor"
@@ -194,7 +99,7 @@ exports[`CircleIcon 1`] = `
   </body>,
   "container": <div>
     <svg
-      class="lucide lucide-circle"
+      class="lucide lucide-circle shrink-0"
       fill="none"
       height="24"
       stroke="currentColor"
@@ -237,7 +142,7 @@ exports[`Icon size 1`] = `
 
     <div>
       <svg
-        class="lucide lucide-circle"
+        class="lucide lucide-circle shrink-0"
         fill="none"
         height="16"
         stroke="currentColor"
@@ -258,7 +163,7 @@ exports[`Icon size 1`] = `
   </body>,
   "container": <div>
     <svg
-      class="lucide lucide-circle"
+      class="lucide lucide-circle shrink-0"
       fill="none"
       height="16"
       stroke="currentColor"
@@ -301,7 +206,7 @@ exports[`SearchIcon 1`] = `
 
     <div>
       <svg
-        class="lucide lucide-search"
+        class="lucide lucide-search shrink-0"
         fill="none"
         height="24"
         stroke="currentColor"
@@ -325,7 +230,7 @@ exports[`SearchIcon 1`] = `
   </body>,
   "container": <div>
     <svg
-      class="lucide lucide-search"
+      class="lucide lucide-search shrink-0"
       fill="none"
       height="24"
       stroke="currentColor"
@@ -357,162 +262,4 @@ exports[`SearchIcon 1`] = `
   "rerender": [Function],
   "unmount": [Function],
 }
-`;
-
-exports[`SearchIcon 2`] = `
-{
-  "asFragment": [Function],
-  "baseElement": <body>
-    
-    
-    
-  
-
-
-    <div>
-      <svg
-        class="lucide lucide-circle"
-        fill="none"
-        height="24"
-        stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2"
-        viewBox="0 0 24 24"
-        width="24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <circle
-          cx="12"
-          cy="12"
-          r="10"
-        />
-      </svg>
-    </div>
-  </body>,
-  "container": <div>
-    <svg
-      class="lucide lucide-circle"
-      fill="none"
-      height="24"
-      stroke="currentColor"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      stroke-width="2"
-      viewBox="0 0 24 24"
-      width="24"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <circle
-        cx="12"
-        cy="12"
-        r="10"
-      />
-    </svg>
-  </div>,
-  "debug": [Function],
-  "getByAltText": [Function],
-  "getByLabelText": [Function],
-  "getByPlaceholder": [Function],
-  "getByRole": [Function],
-  "getByTestId": [Function],
-  "getByText": [Function],
-  "getByTitle": [Function],
-  "rerender": [Function],
-  "unmount": [Function],
-}
-`;
-
-exports[`SearchIcon 3`] = `
-{
-  "asFragment": [Function],
-  "baseElement": <body>
-    
-    
-    
-  
-
-
-    <div>
-      <svg
-        class="lucide lucide-search"
-        fill="none"
-        height="24"
-        stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2"
-        viewBox="0 0 24 24"
-        width="24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <circle
-          cx="11"
-          cy="11"
-          r="8"
-        />
-        <path
-          d="m21 21-4.3-4.3"
-        />
-      </svg>
-    </div>
-  </body>,
-  "container": <div>
-    <svg
-      class="lucide lucide-search"
-      fill="none"
-      height="24"
-      stroke="currentColor"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      stroke-width="2"
-      viewBox="0 0 24 24"
-      width="24"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <circle
-        cx="11"
-        cy="11"
-        r="8"
-      />
-      <path
-        d="m21 21-4.3-4.3"
-      />
-    </svg>
-  </div>,
-  "debug": [Function],
-  "getByAltText": [Function],
-  "getByLabelText": [Function],
-  "getByPlaceholder": [Function],
-  "getByRole": [Function],
-  "getByTestId": [Function],
-  "getByText": [Function],
-  "getByTitle": [Function],
-  "rerender": [Function],
-  "unmount": [Function],
-}
-`;
-
-exports[`variants > default variant 1`] = `
-<button
-  class="flex items-center gap-2 cursor-pointer px-4 py-2 rounded-md justify-center bg-[#ddd] border-[#333] hover:bg-[#ccc]"
->
-  Click me!
-</button>
-`;
-
-exports[`variants > primary variant 1`] = `
-<button
-  class="flex items-center gap-2 cursor-pointer px-4 py-2 rounded-md justify-center bg-[#ddd] border-[#333] hover:bg-[#ccc]"
->
-  Click me!
-</button>
-`;
-
-exports[`variants > secondary variant 1`] = `
-<button
-  class="flex items-center gap-2 cursor-pointer px-4 py-2 rounded-md justify-center border-1 border-[gray] hover:bg-[#f0f0f0] text-[gray]"
->
-  Click me!
-</button>
 `;
