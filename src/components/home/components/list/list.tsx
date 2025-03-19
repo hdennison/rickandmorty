@@ -4,16 +4,10 @@ import { Character } from "@/modules/character/types";
 import { listOrderOptions } from "@/modules/list/list";
 import type { ListOrder } from "@/modules/list/types";
 import { Panel } from "@/components/ui/panel/panel";
-import { CircleIcon } from "@/components/ui/icon/icon";
 import Image from "next/image";
 import { Select } from "@/components/ui/select/select";
 import { Button } from "@/components/ui/button/button";
-
-const statusColors = {
-  Alive: "green",
-  Dead: "red",
-  unknown: "grey",
-};
+import { StatusIndicator } from "@/components/ui/status-indicator/status-indicator";
 
 const CharacterCard = ({ character }: { character: Character }) => {
   const { id, image, name, status, species } = character;
@@ -24,11 +18,7 @@ const CharacterCard = ({ character }: { character: Character }) => {
       <div className="flex flex-col items-start p-4">
         <h3 className="font-bold">{name}</h3>
         <div className="flex gap-2 items-baseline">
-          <CircleIcon
-            size={8}
-            color={statusColors[status]}
-            fill={statusColors[status]}
-          />
+          <StatusIndicator status={status} size={8} />
           {species}
         </div>
         <Button variant="secondary" className="mt-auto" asChild>

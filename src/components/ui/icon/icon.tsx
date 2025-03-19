@@ -2,7 +2,7 @@ import type { LucideIcon, LucideProps } from "lucide-react";
 import { Circle, ChevronsUpDown, Search } from "lucide-react";
 import { cn } from "../utils";
 
-type IconProps = LucideProps & { className?: string };
+export type IconProps = LucideProps & { className?: string };
 
 const withClassName = (Icon: LucideIcon, displayName: string) => {
   const WrappedIcon = ({ className, ...props }: IconProps) => (
