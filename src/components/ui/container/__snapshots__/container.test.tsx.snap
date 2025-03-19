@@ -1,0 +1,81 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Renders as wrapper 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    
+    
+    
+  
+
+
+    <div>
+      <div
+        class="mx-auto w-full max-w-screen-lg"
+        id="container"
+      >
+        Foo
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="mx-auto w-full max-w-screen-lg"
+      id="container"
+    >
+      Foo
+    </div>
+  </div>,
+  "debug": [Function],
+  "getByAltText": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholder": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Renders asChild 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    
+    
+    
+  
+
+
+    <div>
+      <article
+        class="mx-auto w-full max-w-screen-lg"
+        id="container"
+      >
+        Bar
+      </article>
+    </div>
+  </body>,
+  "container": <div>
+    <article
+      class="mx-auto w-full max-w-screen-lg"
+      id="container"
+    >
+      Bar
+    </article>
+  </div>,
+  "debug": [Function],
+  "getByAltText": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholder": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
