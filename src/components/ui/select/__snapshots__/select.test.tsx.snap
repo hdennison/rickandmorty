@@ -1,0 +1,95 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Button with icon 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    
+    
+    
+  
+
+
+    <div>
+      <div
+        class="flex relative items-center gap-2 border-[#aaa] rounded-md border-1 h-10 fake-input bg-[#fafafa]"
+      >
+        <select
+          class="appearance-none flex-1 p-2 pl-3 pr-8 outline-none"
+        >
+          <option>
+            Option 1
+          </option>
+          <option>
+            Option 2
+          </option>
+        </select>
+        <svg
+          class="lucide lucide-chevrons-up-down absolute right-2"
+          fill="none"
+          height="16"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="m7 15 5 5 5-5"
+          />
+          <path
+            d="m7 9 5-5 5 5"
+          />
+        </svg>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="flex relative items-center gap-2 border-[#aaa] rounded-md border-1 h-10 fake-input bg-[#fafafa]"
+    >
+      <select
+        class="appearance-none flex-1 p-2 pl-3 pr-8 outline-none"
+      >
+        <option>
+          Option 1
+        </option>
+        <option>
+          Option 2
+        </option>
+      </select>
+      <svg
+        class="lucide lucide-chevrons-up-down absolute right-2"
+        fill="none"
+        height="16"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        width="16"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="m7 15 5 5 5-5"
+        />
+        <path
+          d="m7 9 5-5 5 5"
+        />
+      </svg>
+    </div>
+  </div>,
+  "debug": [Function],
+  "getByAltText": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholder": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
