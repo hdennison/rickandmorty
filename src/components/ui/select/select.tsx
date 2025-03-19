@@ -4,12 +4,13 @@ import { cva, VariantProps } from "class-variance-authority";
 
 // I strongly recommend to use 'Select' from 'radix-ui' instead of this custom select component
 const selectVariants = cva(
-  "flex relative items-center gap-2 border-[#aaa] rounded-md border-1 h-10 fake-input",
+  "flex relative items-center gap-2 border-[var(--color-input-border)] rounded-md border-1 h-10 fake-input min-h-10 text-sm",
   {
     variants: {
       disabled: {
-        true: "bg-[#eee] text-[#999]",
-        false: "bg-[#fafafa]",
+        true: "bg-[var(--color-input-disabled-bg)] text-[var(--color-input-disabled-text)]",
+        false:
+          "bg-[var(--color-input-bg)] bg:hover(bg-[var(--color-input-bg-hover)])",
       },
     },
     defaultVariants: {

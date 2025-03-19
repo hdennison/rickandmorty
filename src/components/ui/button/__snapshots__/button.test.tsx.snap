@@ -2,10 +2,10 @@
 
 exports[`Button with icon 1`] = `
 <button
-  class="flex items-center gap-2 cursor-pointer px-4 py-2 rounded-md justify-center bg-[#ddd] border-[#333] hover:bg-[#ccc]"
+  class="text-sm flex items-center gap-2 cursor-pointer px-4 py-2 rounded-md justify-center font-semibold min-h-10 bg-[var(--color-action)] hover:bg-[var(--color-action-hover)] text-[var(--color-text-inverse)]"
 >
   <svg
-    class="lucide lucide-search"
+    class="lucide lucide-search shrink-0"
     fill="none"
     height="16"
     stroke="currentColor"
@@ -31,7 +31,7 @@ exports[`Button with icon 1`] = `
 
 exports[`variants > default variant 1`] = `
 <button
-  class="flex items-center gap-2 cursor-pointer px-4 py-2 rounded-md justify-center bg-[#ddd] border-[#333] hover:bg-[#ccc]"
+  class="text-sm flex items-center gap-2 cursor-pointer px-4 py-2 rounded-md justify-center font-semibold min-h-10 bg-[var(--color-action)] hover:bg-[var(--color-action-hover)] text-[var(--color-text-inverse)]"
 >
   Click me!
 </button>
@@ -39,7 +39,7 @@ exports[`variants > default variant 1`] = `
 
 exports[`variants > primary variant 1`] = `
 <button
-  class="flex items-center gap-2 cursor-pointer px-4 py-2 rounded-md justify-center bg-[#ddd] border-[#333] hover:bg-[#ccc]"
+  class="text-sm flex items-center gap-2 cursor-pointer px-4 py-2 rounded-md justify-center font-semibold min-h-10 bg-[var(--color-action)] hover:bg-[var(--color-action-hover)] text-[var(--color-text-inverse)]"
 >
   Click me!
 </button>
@@ -47,7 +47,7 @@ exports[`variants > primary variant 1`] = `
 
 exports[`variants > secondary variant 1`] = `
 <button
-  class="flex items-center gap-2 cursor-pointer px-4 py-2 rounded-md justify-center border-1 border-[gray] hover:bg-[#f0f0f0] text-[gray]"
+  class="text-sm flex items-center gap-2 cursor-pointer px-4 py-2 rounded-md justify-center font-semibold min-h-10 border-1 text-[var(--color-action)] bg-[var(--color-surface)] hover:bg-[var(--color-surface-hover)]"
 >
   Click me!
 </button>

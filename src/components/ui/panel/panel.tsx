@@ -2,7 +2,7 @@ import { Slot } from "@radix-ui/react-slot";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "../utils";
 
-const panelVariants = cva("bg-white rounded-lg shadow-md", {
+const panelVariants = cva("bg-[var(--color-surface)] rounded-lg shadow-md", {
   variants: {
     padding: {
       none: "p-0",

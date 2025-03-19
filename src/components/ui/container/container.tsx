@@ -3,7 +3,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "../utils";
 import { ReactNode } from "react";
 
-const panelVariants = cva("mx-auto w-full", {
+const panelVariants = cva("mx-auto w-full px-4 md:px-6 xl:px-0", {
   variants: {
     width: {
       lg: "max-w-screen-lg",

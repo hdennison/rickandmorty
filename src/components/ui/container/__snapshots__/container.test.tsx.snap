@@ -12,7 +12,7 @@ exports[`Renders as wrapper 1`] = `
 
     <div>
       <div
-        class="mx-auto w-full max-w-screen-lg"
+        class="mx-auto w-full px-4 md:px-6 xl:px-0 max-w-screen-lg"
         id="container"
       >
         Foo
@@ -21,7 +21,7 @@ exports[`Renders as wrapper 1`] = `
   </body>,
   "container": <div>
     <div
-      class="mx-auto w-full max-w-screen-lg"
+      class="mx-auto w-full px-4 md:px-6 xl:px-0 max-w-screen-lg"
       id="container"
     >
       Foo
@@ -52,7 +52,7 @@ exports[`Renders asChild 1`] = `
 
     <div>
       <article
-        class="mx-auto w-full max-w-screen-lg"
+        class="mx-auto w-full px-4 md:px-6 xl:px-0 max-w-screen-lg"
         id="container"
       >
         Bar
@@ -61,7 +61,7 @@ exports[`Renders asChild 1`] = `
   </body>,
   "container": <div>
     <article
-      class="mx-auto w-full max-w-screen-lg"
+      class="mx-auto w-full px-4 md:px-6 xl:px-0 max-w-screen-lg"
       id="container"
     >
       Bar

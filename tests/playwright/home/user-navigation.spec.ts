@@ -11,7 +11,10 @@ javaScriptEnabledOptions.forEach((javaScriptEnabled) => {
       test("User can navigate to Character profile page", async ({ page }) => {
         await page.goto("http://localhost:3000/");
 
-        await page.getByRole("link", { name: "Rick Sanchez" }).click();
+        const firstCard = page.locator("ul > li").first();
+        const link = firstCard.getByRole("link");
+
+        await link.click();
 
         await page.waitForLoadState("networkidle");
 

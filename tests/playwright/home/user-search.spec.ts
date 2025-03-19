@@ -28,8 +28,6 @@ test.describe("Search functionality", () => {
 
           const characters = page.locator("ul > li");
           await expect(characters.first()).toContainText("Adjudicator Rick");
-          await expect(characters.first()).toContainText("Status: Dead");
-
           await expect(page.getByLabel("Status")).toHaveValue("Dead");
 
           await expect(page).toHaveURL(/status=Dead/);

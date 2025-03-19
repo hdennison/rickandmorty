@@ -1,11 +1,7 @@
 "use client";
 
 import { useQuery } from "@tanstack/react-query";
-import {
-  genderValues,
-  getAllCharactersQuery,
-  statusValues,
-} from "@/modules/character/character";
+import { getAllCharactersQuery } from "@/modules/character/character";
 import type {
   CharacterGender,
   CharacterStatus,
@@ -13,38 +9,10 @@ import type {
 import { ListError } from "./components/list/list-error";
 import { List } from "./components/list/list";
 import { ListLoading } from "./components/list/list-loading";
-
-const Filters = ({
-  gender,
-  status,
-}: {
-  gender: CharacterGender;
-  status: CharacterStatus;
-}) => (
-  <form action="" method="GET" className="flex gap-4">
-    <div className="flex gap-2 items-center">
-      <label htmlFor="gender">Gender</label>
-      <select id="gender" name="gender" className="border-2  p-2">
-        {genderValues.map((v) => (
-          <option key={v} value={v} selected={v === gender}>
-            {v}
-          </option>
-        ))}
-      </select>
-    </div>
-    <div className="flex gap-2 items-center">
-      <label htmlFor="status">Status</label>
-      <select id="status" name="status" className="border-2  p-2">
-        {statusValues.map((v) => (
-          <option key={v} value={v} selected={v === status}>
-            {v}
-          </option>
-        ))}
-      </select>
-    </div>
-    <button className="bg-gray-200 border-2 py-1 px-3 text-bold">Search</button>
-  </form>
-);
+import { Logo } from "../ui/logo/logo";
+import { Panel } from "../ui/panel/panel";
+import { Container } from "../ui/container/container";
+import { Filters } from "./components/filters";
 
 export default function Home({
   gender,
@@ -58,16 +26,23 @@ export default function Home({
   );
 
   return (
-    <main className="m-4 grid gap-4">
-      <Filters gender={gender} status={status} />
-      {queryStatus === "pending" && <ListLoading />}
-      {queryStatus === "error" && <ListError />}
-      {queryStatus === "success" && (
-        <List
-          characters={data?.data.results ?? []}
-          amount={data.data.info?.count ?? 0}
-        />
-      )}
-    </main>
+    <Container className="grid gap-6 my-8">
+      <header className="flex flex-col md:flex-row gap-6 md:pl-3">
+        <Logo priority className="w-[200px] self-center md:w-[150px]" />
+        <Panel asChild className="flex-1">
+          <Filters gender={gender} status={status} />
+        </Panel>
+      </header>
+      <main className="grid gap-4">
+        {queryStatus === "pending" && <ListLoading />}
+        {queryStatus === "error" && <ListError />}
+        {queryStatus === "success" && (
+          <List
+            characters={data?.data.results ?? []}
+            amount={data.data.info?.count ?? 0}
+          />
+        )}
+      </main>
+    </Container>
   );
 }

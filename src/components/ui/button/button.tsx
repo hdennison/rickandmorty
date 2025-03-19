@@ -6,12 +6,12 @@ import { cn } from "../utils";
 import { SearchIcon } from "../icon/icon";
 
 const buttonVariants = cva(
-  "flex items-center gap-2 cursor-pointer px-4 py-2 rounded-md justify-center",
+  "text-sm flex items-center gap-2 cursor-pointer px-4 py-2 rounded-md justify-center font-semibold min-h-10",
   {
     variants: {
       variant: {
-        primary: "bg-[#ddd] border-[#333] hover:bg-[#ccc]",
-        secondary: "border-1 border-[gray] hover:bg-[#f0f0f0] text-[gray]",
+        primary: `bg-[var(--color-action)] hover:bg-[var(--color-action-hover)] text-[var(--color-text-inverse)]`,
+        secondary: `border-1 text-[var(--color-action)] bg-[var(--color-surface)] hover:bg-[var(--color-surface-hover)]`,
       },
     },
     defaultVariants: {
