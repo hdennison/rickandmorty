@@ -12,6 +12,8 @@ test.describe("On render", () => {
       const image = page.getByAltText("Rick Sanchez");
 
       await expect(image).toBeVisible();
+
+      await expect(page).toHaveTitle("Rick Sanchez - Rick and Morty");
     });
   });
   test.describe("with NO id param", () => {

@@ -6,6 +6,21 @@ import {
 } from "@tanstack/react-query";
 import { getCharacterQuery } from "@/modules/character/character";
 import { Details } from "./components/details";
+import { Metadata } from "next";
+import { getCharacter } from "rickmortyapi";
+import { SITE_NAME } from "@/constants";
+
+type Props = { params: Promise<{ id: string }> };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { id } = await params;
+
+  const character = await getCharacter(parseInt(id));
+
+  return {
+    title: `${character.data.name} - ${SITE_NAME}`,
+  };
+}
 
 export default async function CharacterPage({
   params: rawParams,

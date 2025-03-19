@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import Providers from "./providers";
 
 import "./globals.css";
+import { SITE_NAME } from "@/constants";
 
 export const metadata: Metadata = {
-  title: "Rick and Morty",
-  description: "",
+  title: SITE_NAME,
 };
 
 export default function RootLayout({
