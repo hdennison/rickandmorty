@@ -1,0 +1,54 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Button with icon 1`] = `
+<button
+  class="flex items-center gap-2 cursor-pointer px-4 py-2 rounded-md justify-center bg-[#ddd] border-[#333] hover:bg-[#ccc]"
+>
+  <svg
+    class="lucide lucide-search"
+    fill="none"
+    height="16"
+    stroke="currentColor"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+    viewBox="0 0 24 24"
+    width="16"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <circle
+      cx="11"
+      cy="11"
+      r="8"
+    />
+    <path
+      d="m21 21-4.3-4.3"
+    />
+  </svg>
+  Click me!
+</button>
+`;
+
+exports[`variants > default variant 1`] = `
+<button
+  class="flex items-center gap-2 cursor-pointer px-4 py-2 rounded-md justify-center bg-[#ddd] border-[#333] hover:bg-[#ccc]"
+>
+  Click me!
+</button>
+`;
+
+exports[`variants > primary variant 1`] = `
+<button
+  class="flex items-center gap-2 cursor-pointer px-4 py-2 rounded-md justify-center bg-[#ddd] border-[#333] hover:bg-[#ccc]"
+>
+  Click me!
+</button>
+`;
+
+exports[`variants > secondary variant 1`] = `
+<button
+  class="flex items-center gap-2 cursor-pointer px-4 py-2 rounded-md justify-center border-1 border-[gray] hover:bg-[#f0f0f0] text-[gray]"
+>
+  Click me!
+</button>
+`;
