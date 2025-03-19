@@ -24,7 +24,6 @@ export const getAllCharactersQuery = ({
     queryKey: [
       "characters",
       queryOptions.status ?? "All",
-      ,
       queryOptions.gender ?? "All",
     ],
     queryFn: () => getCharacters(queryOptions),

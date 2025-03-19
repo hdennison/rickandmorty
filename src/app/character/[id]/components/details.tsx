@@ -2,7 +2,7 @@
 
 import { useQuery } from "@tanstack/react-query";
 import { getCharacterQuery } from "@/modules/character/character";
-import type { Character } from "@/modules/character/character";
+import { Character } from "@/modules/character/types";
 import Image from "next/image";
 
 export const Details = ({ id }: { id: Character["id"] }) => {
