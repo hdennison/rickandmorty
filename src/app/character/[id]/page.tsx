@@ -4,7 +4,10 @@ import {
   HydrationBoundary,
   QueryClient,
 } from "@tanstack/react-query";
-import { getCharacterQuery } from "@/modules/character/character";
+import {
+  getCharacterQuery,
+  getEpisodesQuery,
+} from "@/modules/character/character";
 import { Details } from "./components/details";
 import { Metadata } from "next";
 import { getCharacter } from "rickmortyapi";
@@ -14,7 +17,6 @@ type Props = { params: Promise<{ id: string }> };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { id } = await params;
-
   const character = await getCharacter(parseInt(id));
 
   return {
@@ -35,16 +37,26 @@ export default async function CharacterPage({
   }
 
   try {
-    const query = getCharacterQuery(id);
-    await queryClient.prefetchQuery(query);
+    const characterQuery = getCharacterQuery(id);
+    await queryClient.prefetchQuery(characterQuery);
+    const characterData = queryClient.getQueryData<{
+      data: { episode: string[] };
+    }>(characterQuery.queryKey);
 
-    const data = queryClient.getQueryData(query.queryKey);
-
-    if (!data) {
+    if (!characterData) {
       notFound();
     }
+
+    const episodeIds = characterData.data.episode
+      .map((url: string) => parseInt(url.split("/").pop()!, 10))
+      .filter(Boolean);
+
+    if (episodeIds.length > 0) {
+      const episodesQuery = getEpisodesQuery(episodeIds);
+      await queryClient.prefetchQuery(episodesQuery);
+    }
   } catch (error) {
-    console.error("Failed to fetch character:", error);
+    console.error("Failed to fetch character or episodes:", error);
     notFound();
   }
 

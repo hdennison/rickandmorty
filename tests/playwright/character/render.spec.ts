@@ -6,7 +6,7 @@ test.describe("On render", () => {
       await page.goto("http://localhost:3000/character/1");
 
       await expect(
-        page.getByRole("heading", { name: "Rick Sanchez" })
+        page.getByRole("heading", { name: "Rick Sanchez", level: 1 })
       ).toBeVisible();
 
       const image = page.getByAltText("Rick Sanchez");

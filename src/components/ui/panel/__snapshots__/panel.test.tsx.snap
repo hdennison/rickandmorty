@@ -12,7 +12,7 @@ exports[`Renders as wrapper 1`] = `
 
     <div>
       <div
-        class="bg-[var(--color-surface)] rounded-lg shadow-md p-4"
+        class="rounded-lg p-4 bg-[var(--color-surface)] shadow-md"
         id="panel"
       >
         Foo
@@ -21,7 +21,7 @@ exports[`Renders as wrapper 1`] = `
   </body>,
   "container": <div>
     <div
-      class="bg-[var(--color-surface)] rounded-lg shadow-md p-4"
+      class="rounded-lg p-4 bg-[var(--color-surface)] shadow-md"
       id="panel"
     >
       Foo
@@ -52,7 +52,7 @@ exports[`Renders asChild 1`] = `
 
     <div>
       <article
-        class="bg-[var(--color-surface)] rounded-lg shadow-md p-4"
+        class="rounded-lg p-4 bg-[var(--color-surface)] shadow-md"
         id="Panel"
       >
         Bar
@@ -61,7 +61,7 @@ exports[`Renders asChild 1`] = `
   </body>,
   "container": <div>
     <article
-      class="bg-[var(--color-surface)] rounded-lg shadow-md p-4"
+      class="rounded-lg p-4 bg-[var(--color-surface)] shadow-md"
       id="Panel"
     >
       Bar

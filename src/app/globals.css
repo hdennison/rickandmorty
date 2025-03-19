@@ -19,6 +19,7 @@
 
   /* Surface */
   --color-surface: #fff;
+  --color-surface-low: #f3f4f6;
 
   /* Text */
   --color-text: var(--color-foreground);
@@ -45,6 +46,7 @@
 
     /* Surface */
     --color-surface: rgba(100 100 100 / 10%);
+    --color-surface-low: rgba(100 100 100 / 20%);
     --color-surface-hover: rgba(100 100 100 / 5%);
 
     /* Text */

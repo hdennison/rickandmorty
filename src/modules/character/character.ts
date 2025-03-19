@@ -1,4 +1,4 @@
-import { getCharacter, getCharacters } from "rickmortyapi";
+import { getCharacter, getCharacters, getEpisode } from "rickmortyapi";
 import { CharacterGender, CharacterStatus } from "./types";
 
 export const statusValues = ["All", "Dead", "Alive", "unknown"];
@@ -44,3 +44,11 @@ export const getCharacterQuery = (id: number | string) => {
     },
   };
 };
+
+export const getEpisodesQuery = (episodeIds: number[]) => ({
+  queryKey: ["getEpisodes", episodeIds],
+  queryFn: async () => {
+    const response = await getEpisode(episodeIds);
+    return response.data;
+  },
+});
